@@ -3,6 +3,9 @@
 
       python3 setup.py -d example.com
 
--[x] Scrap the Dorks
--[ ] Add Google Captcha Search Bypass
--[ ] 
+
+
+
+- [x] Scrap the Dorks
+- [ ] Add Google Captcha Search Bypass
+- [ ] 
