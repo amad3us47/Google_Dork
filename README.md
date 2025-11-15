@@ -9,4 +9,5 @@
 - [x] Scrap the Dorks
 - [ ] Add Google Captcha Search Bypass
 - [ ] Frontend
+- [ ] DuckDuck Search
 - [ ] Pipes with other tools args
