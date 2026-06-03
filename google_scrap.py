@@ -111,14 +111,18 @@ def google_search(query, debug=False):
         print("=" * 60)
         for i, (title, link, snippet) in enumerate(results, 1):
             print(f"\n{i}. {title}")
-            print(f"  {link}")
+            print(f"   {link}")
             if snippet:
-                print(f"   📄 {snippet[:150]}{'...' if len(snippet) > 150 else ''}")
+                print(f"   {snippet[:150]}{'...' if len(snippet) > 150 else ''}")
+
+        return results    # ← add this
 
     finally:
         driver.quit()
-
+"""
 
 if __name__ == "__main__":
     url='intitle:"index of" inurl:backup'
     google_search(url)
+
+"""

@@ -13,25 +13,28 @@ def url_parse(page_num):
     """Generate URL for exploit-db GHDB page"""
     return BASE_URL + str(page_num)
 
-def start(url,domain):
+def start(url, domain):
+    results = []
     try:
         response = requests.get(url, headers=headers, timeout=10)
         response.raise_for_status()
-        
+
         soup = BeautifulSoup(response.content, 'html.parser')
         links = soup.find_all('a', class_='external')
-        
+
         if links:
             for link in links:
                 text = link.get_text(strip=True)
-            ## Google search
-                print(f"site:{domain}" +" "+text)
-
+                dork = f"site:{domain} {text}"
+                print(dork)
+                results.append(dork)   # ← return instead of just print
         else:
             print("No links found")
-            
+
     except Exception as e:
         print(f"Error: {e}")
+
+    return results             # ← this is the key change
 
 
 
