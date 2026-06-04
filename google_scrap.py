@@ -115,7 +115,7 @@ def google_search(query, debug=False):
             if snippet:
                 print(f"   {snippet[:150]}{'...' if len(snippet) > 150 else ''}")
 
-        return results    # ← add this
+        return results    
 
     finally:
         driver.quit()
