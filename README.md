@@ -24,6 +24,3 @@ python3 search.py -brows
 
 This tool queries only publicly indexed information. It is intended for education, OSINT research, and authorized security testing. Only use it against domains you own or have explicit permission to test. You are responsible for how you use it.
 
-## License
-
-Add a license of your choice (e.g. MIT).
